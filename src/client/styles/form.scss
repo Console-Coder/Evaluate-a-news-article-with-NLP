@@ -1,0 +1,42 @@
+$btn-bgcolor: rosybrown;
+
+textarea {
+    resize: vertical;
+}
+
+legend {
+    font-size: 1.25em;
+
+}
+
+button {
+    height: 32px;
+    background-color: $btn-bgcolor;
+    color: white;
+
+    &:active {
+        background-color: seagreen;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #main-frm {
+        width: 65%;
+        padding-left: 175px;
+    }
+
+    textarea {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    #main-frm {
+        width: 96%;
+    }
+
+    textarea {
+        width: 92%;
+    }
+}

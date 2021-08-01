@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NLP sentiment analysis</title>
+</head>
+
+<body style="color: white; background-color: #555;">
+    <header>
+	<h1 class="h1-title">NLP sentiment analysis evaluation for news article</h1>
+	</header>
+	<main>
+    <form id="main-frm">
+        <fieldset>
+            <legend>Enter your article to get analyzed</legend>
+            <label>Article:<br></label>
+            <textarea rows="4" id="text"></textarea>
+            <br>
+            <button id="main-btn" type="button">Analyze</button>
+        </fieldset>
+    </form>
+	<p>Sentiment:</p>
+	<div id="sentiment"></div>
+    <p>Additional info on possible sentiment results:</p>
+    <ul>
+        <li>P+: strong positive</li>
+        <li>P: positive</li>
+        <li>NEU: neutral</li>
+        <li>N: negative</li>
+        <li>N+: strong negative</li>
+        <li>NONE: without sentiment</li>
+    </ul>
+	<hr>
+	<p>Agreement:</p>
+	<div id="agreement"></div>
+	<hr>
+	<p>Confidence (ranges from 0 to 100)</p>
+	<div id="confidence"></div>
+	</main>
+	<footer>
+	<p>	&copy;Gamal Ibrahim</p>
+	<p>	&copy;Meaning cloud</p>
+	</footer>
+	<script>
+	if ('serviceWorker' in navigator) {
+   window.addEventListener('load', () => {
+     navigator.serviceWorker.register('../service-worker.js').then(registration => {
+       console.log('SW registered: ', registration);
+     }).catch(registrationError => {
+       console.log('SW registration failed: ', registrationError);
+     });
+   });
+ }
+ </script>
+</body>
+
+</html>
